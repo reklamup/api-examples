@@ -4,7 +4,7 @@ import hashlib
 import time
 
 apiKey = "" # apiKey = "paste key here"
-apiSecret = "" # apiKey = "paste secret here"
+apiSecret = "" # apiSecret = "paste secret here"
 nonce = str(time.time() * 1000) # timestamp millisecond
 
 requestUrl = "/external/v3/app-report?startDate=2022-10-08&endDate=2022-10-09"
