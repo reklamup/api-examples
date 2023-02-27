@@ -8,7 +8,7 @@ REQUEST_URL="/external/v3/app-report?startDate=2022-10-08&endDate=2022-10-09"
 REQUEST_METHOD="GET"
 
 SIGNATURE_PAYLOAD="$API_KEY.$NONCE.$REQUEST_URL.$REQUEST_METHOD"
-SIGNATURE=$(echo -n "$SIGNATURE_PAYLOAD" | openssl dgst -sha384 -hmac "$API_SECRET")
+SIGNATURE=$(echo -n "$SIGNATURE_PAYLOAD" | openssl dgst -sha384 -hmac "$API_SECRET" | sed 's/^.*= //')
 
 curl -X $REQUEST_METHOD \
   -H "Content-Type: application/json" \
