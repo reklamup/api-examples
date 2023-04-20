@@ -19,7 +19,7 @@ public class ReklamUpApi {
     public static void main(String[] args) {
         long nonce = System.currentTimeMillis();
 
-        String requestUrl = "/external/v3/app-report?startDate=2022-10-08&endDate=2022-10-09";
+        String requestUrl = "/external/v3/app-report?timeDimension=DAY&dimensions=AD_UNIT,APP,COUNTRY&startDate=2023-04-20&endDate=2023-04-20";
         String requestMethod = "GET";
 
         try {
